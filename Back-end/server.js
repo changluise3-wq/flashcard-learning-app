@@ -10,7 +10,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'beaniceperson2020', 
+    password: 'YOUR_DATABASE_PASSWORD_HERE', 
     database: 'flashcard_db'
 });
 

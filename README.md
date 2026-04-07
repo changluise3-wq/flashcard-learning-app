@@ -38,6 +38,15 @@ Regarding the requirement "The card disappears after use":
 *   **Backend**: Node.js, Express.js.
 *   **Database**: MySQL.
 
+## Folder Structure
+- `/Back-end`: Node.js server, API routes, and database connection.
+- `/Front-end/client`: React frontend, components, and styling.
+- `/flashcard.sql`: Database export for MySQL Workbench.
+
+## Challenges Overcome
+During the development, one major challenge was ensuring a seamless User Experience (UX) while adhering to the "card disappears after use" requirement. I initially considered an automatic timer, but realized it might interrupt the user's reading flow, so I implemented a manual "Got it" confirmation to give users control. Another technical hurdle was managing the state transitions in a Single-Page Application (SPA) to ensure that CRUD operations (like deleting or adding a card) reflected instantly without a page reload. Lastly, configuring the Express backend to handle CORS and MySQL connection errors ensured the app remains stable even during database interruptions.
+
+
 ## Installation & Setup
 
 ### 1. Database Setup
@@ -45,7 +54,7 @@ Regarding the requirement "The card disappears after use":
 2. Import the provided `flashcard_db.sql` file.
 
 ### 2. Backend Configuration
-1. Navigate to the server directory: `cd backend`
+1. Navigate to the server directory: `cd Back-end`
 2. Install dependencies: `npm install`
 3. **IMPORTANT**: Open `server.js` and verify the database credentials:
    - **Host**: localhost
@@ -55,7 +64,7 @@ Regarding the requirement "The card disappears after use":
 4. Start the server: `node server.js` (Running on http://localhost:8080)
 
 ### 3. Frontend Configuration
-1. Navigate to the client directory: `cd client`
+1. Navigate to the client directory: `cd Front-end/client`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
